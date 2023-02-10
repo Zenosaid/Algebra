@@ -1,164 +1,119 @@
 <!DOCTYPE html>
-<html> 
+<html lang="en">
+  <style type="text/css">
+    h1 {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #f00;
+      font-size: x-large;
+    }
+    p {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #000;
+      font-size: small;
+    }
+    body {
+      background-color: #fff;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    #bloctxt {
+      border-left-width: 5px;
+      border-left-style: solid;
+      border-left-color: #f00;
+      padding-left: 10px;
+      position: absolute;
+      left: 50%%;
+      width: 600px;
+      margin-left: -260px;
+    }
+  </style>
+  <head> 
+ <link rel="icon" type="image/x-icon" href="/img/newlogo.png" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XXGG6SJL6H"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
-  <title>My Game Website</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-</head>
+      gtag("config", "G-XXGG6SJL6H");
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-<body>
-  <header>
-    <h1>My Game Website</h1>
-  </header>
-  <nav>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="#">Games</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-  <center>
-    <input type="text" id="search-input">
-  </center>
+    <!-- Enables full-screen on iOS devices -->
+    <meta
+      name="viewport"
+      content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="HandheldFriendly" content="true" />
 
+    <title>Five Nights at Freddy's</title>
 
+    <script>
+      // Detection of old browsers that do not support the canvas element
+      // Falls back to a default page
+      if (!document.createElement("canvas").getContext) {
+        window.open("http://www.clickteam.com/html5-fallback", "_self");
+      }
+    </script>
 
+    <!-- EXTRASOURCES -->
+    <!-- Loads the Javascript code...-->
+    <script src="src/Runtime.js"></script>
 
-  <main>
-    <h2>Welcome to My Game Website</h2>
-    <p>Here you can play the latest and greatest games online!</p>
-    <div class="game-container">
-      <a href="./projects/bitlife/index.html">
-        <img src="./projects/bitlife/splash.png" alt="Bitlife">
-      </a>
-      <p>Bitlife</p>
-    </div>
-    </div>
-    <div class="game-container"><a href="./projects/Cookie-Clicker/index.html">
-        <img src="./projects/Cookie-Clicker/cookie1.jpeg" alt="Cookie Clicker"></a>
-      <p>Cookie Clicker</p>
-    </div>
-    <div class="game-container"><a href="./projects/Shellshockers/index.html">
-        <img src="./projects/Shellshockers/img/favicon.jpg" alt="Shellshockers"></a>
-      <p>Shellshockers</p>
-    </div>
-    <div class="game-container"><a href="./projects/minecraft-15/index.html">
-        <img src="./projects/minecraft-15/splash.jpeg" alt="Minecraft 1.5.2"></a>
-      <p>Minecraft 1.5.2</p>
-    </div>
-    <div class="game-container"><a href="./projects/grindcraft/index.html">
-        <img src="./projects/grindcraft/img/splash.png" alt="Grindcraft"></a>
-      <p>Grindcraft</p>
-    </div>
-    <div class="game-container"><a href="./projects/2048/index.html">
-        <img src="./projects/2048/thumb.png" alt="2048"></a>
-      <p>2048</p>
-    </div>
-    <div class="game-container"><a href="./projects/you-are-bezos/index.html">
-        <img src="data:image/jpeg;base64,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" alt="You Are Bezos"></a>
-      <p>You Are Bezos</p>
-    </div>
-    <div class="game-container"><a href="./projects/vex3/index.html">
-        <img src="./projects/vex3/vex3.png" alt="Game 3"></a>
-      <p>Vex 3</p>
-    </div>
-    <div class="game-container"><a href="./projects/vex4/index.html">
-        <img src="./projects/vex4/vex4.png" alt="Game 3"></a>
-      <p>Vex 4</p>
-    </div>
-    <div class="game-container"><a href="./projects/vex5/index.html">
-        <img src="./projects/vex5/vex.jpeg" alt="Game 3"></a>
-      <p>Vex 5</p>
-    </div>
-    <div class="game-container"><a href="./projects/vex6/index.html">
-        <img src="./projects/vex6/assets/icon.jpeg" alt="Game 3"></a>
-      <p>Vex 6</p>
-    </div>
-    <div class="game-container"><a href="./projects/vex7/index.html">
-        <img src="./projects/vex7/assets/icon.jpeg" alt="Game 3"></a>
-      <p>Vex 7</p>
-    </div>
-    <div class="game-container"><a href="./projects/waterworks/index.html">
-        <img src="./projects/waterworks/splash.png" alt="Game 3"></a>
-      <p>Waterworks</p>
-    </div>
-    <div class="game-container"><a href="./webgl-fluid-simulation/index.html">
-        <img src="./projects/webgl-fluid-simulation/logo.png" alt="Game 3"></a>
-      <p>weavesilk</p>
+    <script>
+      // Detection of when the html file is ran locally.
+      // You can remove this code for the final version
+      if (window.location.protocol == "file:") {
+        document.write('<div id="bloctxt">');
+        document.write("<h1>The application cannot be run...</h1>");
+        document.write(
+          "<p>HTML browsers do not allow you to launch data files directly from the file system.<br>"
+        );
+        document.write(
+          "A drag & drop of the html file on a web-browser window will not work, on any machine.<br>"
+        );
+        document.write(
+          "Please use the Build & Run option (it opens a local web server) to run your application,<br>"
+        );
+        document.write(
+          "or upload your application folder to a remote web-server, and start it from there...</p>"
+        );
+        document.write("</div>");
+        throw new error("Cannot run application");
+      }
+    </script>
+  </head>
+
+  <body>
+    <div
+      style="display: inline-block; -webkit-user-select: none; text-align: left"
+    >
+      <canvas id="MMFCanvas" width="1280" height="720">
+        Your browser does not support Canvas.
+      </canvas>
     </div>
 
-    <div class="game-container"><a href="./projects/2048/index.html">
-        <img src="./projects/2048/thumb.png" alt="Game 3"></a>
-      <p>2048</p>
-    </div>
-    <div class="game-container"><a href="./projects/Worlds-Hardest-Game/index.html">
-        <img src="./projects/Worlds-Hardest-Game/images/splash.jpg" alt="Game 3"></a>
-      <p>The Worlds Hardest Game</p>
-    </div>
-
-    <div class="game-container"><a href="./projects/worlds-hardest-game-2/index.html">
-        <img src="./projects/worlds-hardest-game-2/the-worlds-hardest-game-2.jpg" alt="Game 3"></a>
-      <p>The Worlds Hardest Game 2</p>
-    </div>
-
-    <div class="game-container"><a href="./projects/wolf3d/index.html">
-        <img src="./projects/wolf3d/art/wolf3d.png" alt="Game 3"></a>
-      <p>Wolfenstein 3D</p>
-    </div>
-    <div class="game-container"><a href="./projects/minecraft-18/index.html">
-        <img src="./projects/minecraft-18/favicon.png" alt="Game 3"></a>
-      <p>Minecraft 1.8.8</p>
-    </div>
-    <div class="game-container"><a href="./projects/zombs-royale/index.html">
-        <img src="./projects/zombs-royale/zomb.png" alt="Game 3"></a>
-      <p>Zombs Royale</p>
-    </div>
-    <div class="game-container"><a href="./projects/Wordle/">
-        <img src="/projects/Wordle/img/logo_96x96.png" alt="Game 3"></a>
-      <p>Wordle</p>
-    </div>
-    <div class="game-container"><a href="./projects/idk/">
-        <img src="./projects/y7/TemplateData/favicon.ico" alt="Game 3"></a>
-      <p>----</p>
-    </div>
-    <div class="game-container"><a href="./projects/adofai/index.html">
-        <img src="./projects/adofai/unnamed.png" alt="Game 3"></a>
-      <p>A Dance of Fire and Ice</p>
-    </div>
-    </div>
-    <div class="game-container"><a href="./projects/fnaf/index.html">
-        <img src="./projects/fnaf/resources/0498.png" alt="Game 3"></a>
-      <p>FNAF</p>
-    </div>
-    <div class="game-container"><a href="./projects/fruitninja/index.html">
-    <img src="./projects/fruitninja/FruitNinjaTeaser.jpg" alt="Game 3"></a>
-      <p>Fruit Ninja</p>
-    </div>
-    <div class="game-container"><a href="./projects/tinyfishing/">
-    <img src="./projects/tinyfishing/thumb.png" alt="Game 3"></a>
-      <p>Tiny Fishing</p>
-    </div>
-      <div class="game-container"><a href="./projects/crossyroad/index.html">
-    <img src="./projects/crossyroad/crossyroad.png" alt="Game 3"></a>
-      <p>Crossy Road</p>
-      </div>
-        <div class="game-container"><a href="./projects/snowbattle/index.html">
-    <img src="./projects/snowbattle/img/logo.png" alt="Game 3"></a>
-      <p>Snow Battle.io</p>
-        </div>
-          <div class="game-container"><a href="./projects/stack/index.html">
-    <img src="./projects/stack/stack.png" alt="Game 3"></a>
-      <p>Stack</p>
-          </div>
-            <div class="game-container"><a href="./projects/theheist/index.html">
-    <img src="./projects/theheist/theheist.jpg" alt="Game 3"></a>
-      <p>The Heist</p>
-    </div>
-  </main>
-  <footer>
-    <p>&copy; Zenosaid</p>
-  </footer>
-  <script src="script.js"></script>
-</body>
-
+    <script>
+      // RUNTIMESTART
+      // This is where the HTML5 runtime is actually started
+      window.addEventListener("load", windowLoaded, false);
+      function windowLoaded() {
+        // Calls the runtime
+        // First parameter : name of the canvas element
+        // Second parameter : path to the cch file. Images and sounds must lay beside this file
+        new Runtime("MMFCanvas", "resources/FNAF1HTML5.cch");
+      }
+      // RUNTIMESTARTEND
+    </script>
+  <script src="/html/settings/js/index.js"></script> 
+   </body>
 </html>
