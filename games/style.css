@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color:green;
+  background-color:#383a3b;
 }
 
 header {
@@ -95,9 +95,9 @@ form {
 
 input[type="text"] {
   padding: 10px;
-  border-radius: 20px 0 0 20px;
+  background: lightgray;
+  border-radius: 15px;
   border: none;
-  background-color: lightgray;
   width: 60%;
 }
 
