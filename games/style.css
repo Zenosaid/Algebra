@@ -97,6 +97,7 @@ input[type="text"] {
   padding: 10px;
   background: lightgray;
   border-radius: 15px;
+  text-align: center;
   border: none;
   width: 60%;
 }
