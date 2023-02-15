@@ -30,23 +30,21 @@ if(month == 3 && day == 1){
     }
     searchInput.addEventListener('input', updateResults);
   };
-const gameList = document.querySelector('.game-list');
+// Get all the game containers
+const gameContainers = document.querySelectorAll('.game-container');
 
-// Select all the game elements
-const games = gameList.querySelectorAll('.game');
-
-// Convert the game elements to an array
-const gamesArray = Array.from(games);
-
-// Sort the game elements alphabetically by title
-gamesArray.sort((a, b) => {
-  const aTitle = a.querySelector('.game-title').textContent.trim().toLowerCase();
-  const bTitle = b.querySelector('.game-title').textContent.trim().toLowerCase();
-  return aTitle.localeCompare(bTitle);
+// Convert to array and sort alphabetically
+const sortedContainers = Array.from(gameContainers).sort((a, b) => {
+  const gameA = a.querySelector('p').textContent;
+  const gameB = b.querySelector('p').textContent;
+  return gameA.localeCompare(gameB);
 });
 
-// Remove the game elements from the list
-games.forEach(game => game.remove());
+// Clear out current game containers
+const main = document.querySelector('main');
+main.innerHTML = '';
 
-// Append the sorted game elements to the list
-gamesArray.forEach(game => gameList.appendChild(game));
+// Append sorted game containers to the main element
+sortedContainers.forEach(container => main.appendChild(container));
+
+
