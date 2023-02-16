@@ -1,29 +1,90 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Login Page</title>
+    <title>Login</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+      }
+      #container {
+        max-width: 400px;
+        margin: 0 auto;
+        margin-top: 50px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+      }
+      h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      label {
+        display: block;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+      input[type="text"],
+      input[type="password"] {
+        font-size: 16px;
+        padding: 10px;
+        width: 100%;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+      button {
+        background-color: #4CAF50;
+        color: white;
+        font-size: 16px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+      }
+      button:hover {
+        background-color: #3e8e41;
+      }
+      .error {
+        color: red;
+        margin-top: 10px;
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
-    <h1>Login</h1>
-    <form>
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username" required><br><br>
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" required><br><br>
-      <button type="submit" onclick="login()">Login</button>
-    </form>
+    <div id="container">
+      <h1>Login</h1>
+      <form id="login-form" method="POST">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Login</button>
+        <div class="error" id="error-message"></div>
+      </form>
+    </div>
 
     <script>
-      function login() {
-        const username = document.getElementById("username").value;
-        const password = document.getElementById("password").value;
+      const loginForm = document.getElementById("login-form");
+      const errorMessage = document.getElementById("error-message");
+      const usernameInput = document.getElementById("username");
+      const passwordInput = document.getElementById("password");
 
-        if (username === "user" && password === "password") {
-          window.location = "/games";
+      loginForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        // perform login check
+        if (usernameInput.value === "myusername" && passwordInput.value === "mypassword") {
+          window.location.href = "/games";
         } else {
-          alert("Invalid username or password. Please try again.");
+          errorMessage.innerText = "Invalid username or password";
         }
-      }
+      });
     </script>
   </body>
 </html>
