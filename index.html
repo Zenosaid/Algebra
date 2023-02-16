@@ -1,75 +1,27 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>Login Page</title>
-    <style>
-      /* Add some basic styling to the page */
-      body {
-        background-color: #f2f2f2;
-        font-family: Arial, sans-serif;
-      }
-      form {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-        width: 300px;
-        margin: 50px auto;
-      }
-      label {
-        display: block;
-        margin-bottom: 10px;
-      }
-      input[type="text"],
-      input[type="password"] {
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        width: 100%;
-        margin-bottom: 20px;
-      }
-      input[type="submit"] {
-        background-color: #4CAF50;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        padding: 10px 20px;
-        cursor: pointer;
-      }
-      input[type="submit"]:hover {
-        background-color: #3e8e41;
-      }
-    </style>
   </head>
   <body>
+    <h1>Login</h1>
     <form>
-      <h2>Login</h2>
       <label for="username">Username:</label>
-      <input type="text" id="username" name="username" required>
-
+      <input type="text" id="username" name="username" required><br><br>
       <label for="password">Password:</label>
-      <input type="password" id="password" name="password" required>
-
-      <input type="submit" value="Submit" onclick="login()">
+      <input type="password" id="password" name="password" required><br><br>
+      <button type="submit" onclick="login()">Login</button>
     </form>
 
     <script>
-      // Define a function to handle the form submission
       function login() {
-        // Get the values of the username and password fields
         const username = document.getElementById("username").value;
         const password = document.getElementById("password").value;
 
-        // Perform some basic validation
-        if (username === "" || password === "") {
-          alert("Please enter both a username and password.");
-          return;
-        }
-
-        // Check if the username and password are correct
-        if (username === "myusername" && password === "mypassword") {
-          alert("Login successful!");
+        if (username === "user" && password === "password") {
+          window.location = "/games";
         } else {
-          alert("Incorrect username or password.");
+          alert("Invalid username or password. Please try again.");
         }
       }
     </script>
