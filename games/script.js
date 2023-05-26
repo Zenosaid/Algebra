@@ -30,3 +30,21 @@ if(month == 3 && day == 1){
     }
     searchInput.addEventListener('input', updateResults);
   };
+// Get all the game containers
+const gameContainers = document.querySelectorAll('.game-container');
+
+// Convert to array and sort alphabetically
+const sortedContainers = Array.from(gameContainers).sort((a, b) => {
+  const gameA = a.querySelector('p').textContent;
+  const gameB = b.querySelector('p').textContent;
+  return gameA.localeCompare(gameB);
+});
+
+// Clear out current game containers
+const main = document.querySelector('main');
+main.innerHTML = '';
+
+// Append sorted game containers to the main element
+sortedContainers.forEach(container => main.appendChild(container));
+
+
