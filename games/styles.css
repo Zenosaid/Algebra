@@ -55,9 +55,9 @@ h2 {
 
 .game-icon {
     position: relative;
-    margin: 10px;
     width: 100px; /* Set the width of the game icon container */
     height: 100px; /* Set the height of the game icon container */
+    margin: 10px;
     border-radius: 10px;
     overflow: hidden; /* Clip the game title inside the container */
     background-color: #F79BD3; /* Game icon container background color */
@@ -87,6 +87,20 @@ h2 {
 
 .game-icon:hover .game-title {
     opacity: 1; /* Show title on hover */
+}
+
+/* CSS Animation for horizontal movement for the 'featured-icons' class */
+@keyframes marqueeAnim {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%); /* Move icons to the left */
+    }
+}
+
+.featured-icons {
+    animation: marqueeAnim 10s linear infinite; /* Apply the animation to the 'featured-icons' class */
 }
 
 .view-more {
