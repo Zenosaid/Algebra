@@ -50,16 +50,15 @@ h2 {
 
 .game-icons {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    overflow: hidden; /* Hide overflow to create the scrolling effect */
 }
 
 .game-icon {
-    position: relative;
     width: 100px; /* Set the width of the game icon container */
     height: 100px; /* Set the height of the game icon container */
     margin: 10px;
     border-radius: 10px;
-    overflow: hidden; /* Clip the game title inside the container */
     background-color: #F79BD3; /* Game icon container background color */
 }
 
@@ -72,21 +71,16 @@ h2 {
 }
 
 .game-title {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    display: block; /* Make the title take full width of the container */
     background-color: rgba(0, 0, 0, 0.7);
     color: #fff;
     padding: 5px;
     border-radius: 0 0 10px 10px;
     text-align: center;
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.2s ease;
 }
 
-.game-icon:hover .game-title {
-    opacity: 1; /* Show title on hover */
+.featured-icons {
+    animation: marqueeAnim 20s linear infinite; /* Apply the animation to the 'featured-icons' class */
 }
 
 /* CSS Animation for horizontal movement for the 'featured-icons' class */
@@ -99,9 +93,6 @@ h2 {
     }
 }
 
-.featured-icons {
-    animation: marqueeAnim 10s linear infinite; /* Apply the animation to the 'featured-icons' class */
-}
 
 .view-more {
     text-align: center;
