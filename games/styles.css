@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+};
+
+section#featured-games {
+    /* Styling for your featured games section */
+};
+
+section#game-categories {
+    /* Styling for your game categories section */
+};
+
+section#game-categories .category {
+    /* Styling for each category */
+    transition: transform .2s;
+}
+
+section#game-categories .category:hover {
+    /* When category is hovered */
+    transform: scale(1.05);
+}
+.game {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.game .game-icon {
+    width: 100%;
+    height: 100%;
+}
+
+.game .game-title {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0,0,0,0.5); 
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}

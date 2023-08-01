@@ -1,50 +1,16 @@
-console.log("Zenosaid's game website - You can fork, just leave credit!");
-var d = new Date (Date.now());
-var month = d.getMonth();
-var day = d.getDate();
-if(month == 3 && day == 1){
-  window.location.href = "/games/a68727ceae02c159bef14f717f0eb5d6.mp4";
-}
+document.querySelectorAll('div.category').forEach(categoryDiv => {
+  categoryDiv.addEventListener('mouseover', function(event) {
+      let gameTitle = this.getAttribute('data-game-title'); // assuming you have data-game-title attribute specifying the name of the game
+      alert(`You are hovering over: ${gameTitle}`);})})
+let games = document.querySelectorAll('.game');
 
- window.onload = function() {
-    const gameContainerList = document.querySelectorAll('.game-container');
-    const gameContainerContainer = document.querySelector('.game-container-container');
-    const searchInput = document.querySelector('#search-input');
-
-    function updateResults() {
-      const searchTerm = searchInput.value.toLowerCase();
-      let totalWidth = 0;
-      gameContainerList.forEach(container => {
-        const gameName = container.querySelector('p').textContent.toLowerCase();
-        if (gameName.includes(searchTerm)) {
-          container.style.display = 'inline-block';
-          totalWidth += container.offsetWidth;
-        } else {
-          container.style.display = 'none';
-        }
-      });
-     
-      if (gameContainerContainer) {
-  gameContainerContainer.style.width = totalWidth + 'px';
-}
-    }
-    searchInput.addEventListener('input', updateResults);
-  };
-// Get all the game containers
-const gameContainers = document.querySelectorAll('.game-container');
-
-// Convert to array and sort alphabetically
-const sortedContainers = Array.from(gameContainers).sort((a, b) => {
-  const gameA = a.querySelector('p').textContent;
-  const gameB = b.querySelector('p').textContent;
-  return gameA.localeCompare(gameB);
-});
-
-// Clear out current game containers
-const main = document.querySelector('main');
-main.innerHTML = '';
-
-// Append sorted game containers to the main element
-sortedContainers.forEach(container => main.appendChild(container));
-
-
+games.forEach(game => {
+    game.addEventListener('mouseenter', e => {
+        let title = game.querySelector('.game-title');
+        title.style.display = 'block';
+    });
+    game.addEventListener('mouseleave', e => {
+        let title = game.querySelector('.game-title');
+        title.style.display = 'none';
+    });
+}); 

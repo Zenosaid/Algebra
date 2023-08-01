@@ -1,330 +1,35 @@
 <!DOCTYPE html>
-<html> 
-
+<html>
 <head>
-  <!--- you're not ready -->
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1"> 
-  <title>My Game Website</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Your website title</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-
 <body>
-  <header>
-    <h1>My Game Website</h1>
-  </header>
-  <nav>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="./Wigdet">Discord!</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-  <br>
-  <center>
-    <input type="text" id="search-input" placeholder="Search...">
-  </center>
-
-
-
-
-  <main>
-    <h2>Welcome to My Game Website</h2>
-    <p>Here you can play the latest and greatest games online!</p>
-    <!--- let the hellhole begin -->
-    <div class="game-container">
-      <a href="/projects/1v1lol/">
-        <img src="/projects/1v1lol/1v1.png" alt="1v1lol">
-      </a>
-      <p>1v1.lol</p>
-    </div>
-    <div class="game-container">
-      <a href="/projects/bitlife/index.html">
-        <img src="/projects/bitlife/splash.png" alt="Bitlife">
-      </a>
-      <p>Bitlife</p>
-    </div>
-    </div>
-    <div class="game-container"><a href="/projects/Cookie-Clicker/index.html">
-        <img src="/projects/Cookie-Clicker/cookie1.jpeg" alt="Cookie Clicker"></a>
-      <p>Cookie Clicker</p>
-    </div>
-    <div class="game-container"><a href="/projects/minecraft-15/index.html">
-        <img src="/projects/minecraft-15/splash.jpeg" alt="Minecraft 1.5.2"></a>
-      <p>Minecraft 1.5.2</p>
-    </div>
-    <div class="game-container"><a href="/projects/grindcraft/">
-        <img src="/projects/grindcraft/img/splash.png" alt="Grindcraft"></a>
-      <p>Grindcraft</p>
-    </div>
-    <div class="game-container"><a href="/projects/2048/index.html">
-        <img src="/projects/2048/thumb.png" alt="2048"></a>
-      <p>2048</p>
-    </div>
-    <div class="game-container"><a href="/projects/you-are-bezos/index.html">
-        <img src="/projects/you-are-bezos/img/banner.png" alt="You Are Bezos"></a>
-      <p>You Are Bezos</p>
-    </div>
-    <div class="game-container"><a href="/projects/vex3/index.html">
-        <img src="/projects/vex3/vex3.png" alt="Game 3"></a>
-      <p>Vex 3</p>
-    </div>
-    <div class="game-container"><a href="/projects/vex4/index.html">
-        <img src="/projects/vex4/vex4.png" alt="Game 3"></a>
-      <p>Vex 4</p>
-    </div>
-    <div class="game-container"><a href="/projects/vex5/index.html">
-        <img src="/projects/vex5/vex.jpeg" alt="Game 3"></a>
-      <p>Vex 5</p>
-    </div>
-    <div class="game-container"><a href="/projects/index.html">
-        <img src="/projects/vex6/assets/icon.jpeg" alt="Game 3"></a>
-      <p>Vex 6</p>
-    </div>
-    <div class="game-container"><a href="/projects/vex7/index.html">
-        <img src="/projects/vex7/assets/icon.jpeg" alt="Game 3"></a>
-      <p>Vex 7</p>
-    </div>
-    <div class="game-container"><a href="/projects/waterworks/index.html">
-        <img src="/projects/waterworks/splash.png" alt="Game 3"></a>
-      <p>Waterworks</p>
-    </div>
-    <div class="game-container"><a href="/projects/webgl-fluid-simulation/index.html">
-        <img src="/projects/webgl-fluid-simulation/logo.png" alt="Game 3"></a>
-      <p>weavesilk</p>
-    </div>
-
-    <div class="game-container"><a href="/projects/2048/index.html">
-        <img src="/projects/2048/thumb.png" alt="Game 3"></a>
-      <p>my dumbass put the same game twice</p>
-    </div>
-    <div class="game-container"><a href="/projects/Worlds-Hardest-Game/index.html">
-        <img src="/projects/Worlds-Hardest-Game/images/splash.jpg" alt="Game 3"></a>
-      <p>The Worlds Hardest Game</p>
-    </div>
-
-    <div class="game-container"><a href="/projects/worlds-hardest-game-2/index.html">
-        <img src="/projects/worlds-hardest-game-2/the-worlds-hardest-game-2.jpg" alt="Game 3"></a>
-      <p>The Worlds Hardest Game 2</p>
-    </div>
-
-    <div class="game-container"><a href="/projects/wolf3d/index.html">
-        <img src="/projects/wolf3d/art/wolf3d.png" alt="Game 3"></a>
-      <p>Wolfenstein 3D</p>
-    </div>
-    <div class="game-container"><a href="/projects/minecraft-18/index.html">
-        <img src="/projects/minecraft-18/favicon.png" alt="Game 3"></a>
-      <p>Minecraft 1.8.8</p>
-    </div>
-    <div class="game-container"><a href="/projects/zombs-royale/index.html">
-        <img src="/projects/zombs-royale/zomb.png" alt="Game 3"></a>
-      <p>Zombs Royale</p>
-    </div>
-    <div class="game-container"><a href="/projects/Wordle/index.html">
-        <img src="/projects/Wordle/img/logo_96x96.png" alt="Game 3"></a>
-      <p>Wordle</p>
-    </div>
+    <section id="featured-games">
+        <h1>Featured Games</h1>
+        <div class="game">
+          <img src="game-icon.jpg" alt="Game Icon" class="game-icon">
+          <div class="game-title">Game Title</div>
+      </div>
+    </section>
     
-    <div class="game-container"><a href="/projects/adofai/index.html">
-        <img src="/projects/adofai/unnamed.png" alt="Game 3"></a>
-      <p>A Dance of Fire and Ice</p>
-    </div>
-    <!--- what the fuck -->
-    </div>
-    <div class="game-container"><a href="/projects/fnaf/index.html">
-        <img src="/projects/fnaf/resources/0498.png" alt="Game 3"></a>
-      <p>FNAF</p>
-    </div>
-    <div class="game-container"><a href="/projects/fruitninja/index.html">
-    <img src="/projects/fruitninja/FruitNinjaTeaser.jpg" alt="Game 3"></a>
-      <p>Fruit Ninja</p>
-    </div>
-    <div class="game-container"><a href="/projects/tinyfishing/index.html">
-    <img src="/projects/tinyfishing/thumb.png" alt="Game 3"></a>
-      <p>Tiny Fishing</p>
-    </div>
-      <div class="game-container"><a href="/projects/crossyroad/index.html">
-    <img src="/projects/crossyroad/crossyroad.png" alt="Game 3"></a>
-      <p>Crossy Road</p>
-      </div>
-        <div class="game-container"><a href="/projects/snowbattle/index.html">
-    <img src="/projects/snowbattle/img/logo.png" alt="Game 3"></a>
-      <p>Snow Battle.io</p>
-        </div>
-          <div class="game-container"><a href="/projects/stack/index.html">
-    <img src="/projects/stack/stack.png" alt="Game 3"></a>
-      <p>Stack</p>
-  </div>
- <div class="game-container"><a href="/projects/fnaf2/index.html">
-    <img src="/projects/fnaf2/resources/0443.png" alt="Game 3"></a>
-      <p>FNAF 2</p>
+    <section id="game-categories">
+        <h1>Game Genres</h1>
+        <div class="category action">
+            <h2>Action</h2>
+            <!-- Add action games here -->
+            <div class="game">
+              <img src="game-icon.jpg" alt="Game Icon" class="game-icon">
+              <div class="game-title">Game Title</div>
           </div>
-            <div class="game-container"><a href="/projects/theheist/index.html">
-    <img src="/projects/theheist/theheist.jpg" alt="Game 3"></a>
-      <p>The Heist</p>
-    </div>
-    <div class="game-container"><a href="/projects/bad-ice-cream/">
-    <img src="/projects/bad-ice-cream/bad-ice-cream.png" alt="Game 3"></a>
-      <p>Bad Ice Cream</p>
-    </div>
-    <div class="game-container"><a href="/projects/paperio2/">
-    <img src="/projects/paperio2/images/logo.png" alt="Game 3"></a>
-      <p>Paper.io 2</p>
-    </div>
-    <div class="game-container"><a href="/projects/bad-ice-cream/">
-    <img src="/projects/bad-ice-cream/bad-ice-cream.png" alt="Game 3"></a>
-      <p>Bad Ice Cream</p>
-    </div>
-    <div class="game-container"><a href="/projects/bad-ice-cream/">
-    <img src="/projects/bad-ice-cream/bad-ice-cream.png" alt="Game 3"></a>
-      <p>Bad Ice Cream</p>
-       <!--- what the nearing the end i think idk -->
-    </div>
-    <div class="game-container"><a href="/projects/bad-ice-cream-2/">
-      <img src="/projects/bad-ice-cream-2/bad-ice-cream-2.png" alt="Game 3"></a>
-        <p>Bad Ice Cream 2</p>
         </div>
-        <div class="game-container"><a href="/projects/bad-ice-cream-3/">
-          <img src="/projects/bad-ice-cream-3/bad-ice-cream-3.png" alt="Game 3"></a>
-            <p>Bad Ice Cream 3</p>
+        <div class="category calming">
+            <h2>Calming</h2>
+            <div class="game">
+              <img src="game-icon.jpg" alt="Game Icon" class="game-icon">
+              <div class="game-title">Game Title</div>
           </div>
-
-            <div class="game-container"><a href="/projects/slope/">
-              <img src="/projects/slope/slope.jpg" alt="Game 3"></a>
-                <p>Slope </p>
-              </div>
-    <div class="game-container"><a href="/projects/sm64/">
-    <img src="/projects/sm64/64.jpg" alt="Game 3"></a>
-      <p>Super Mario 64</p>
-    </div>
-    <div class="game-container"><a href="/projects/portalflash/">
-      <img src="/projects/portalflash/portaltheflashversion.jpg" alt="Game 3"></a>
-        <p>Portal (Flash)</p>
-      </div>
-      <div class="game-container"><a href="/projects/riddleschool/">
-        <img src="/projects/riddleschool/riddleschool.png" alt="Game 3"></a>
-          <p>Riddle School</p>
         </div>
-        <div class="game-container"><a href="/projects/riddleschool2/">
-          <img src="/projects/riddleschool2/riddleschool2.png" alt="Game 3"></a>
-            <p>Riddle School 2</p>
-          </div>
-          <div class="game-container"><a href="/projects/riddleschool3/">
-            <img src="/projects/riddleschool3/riddleschool3.png" alt="Game 3"></a>
-              <p>Riddle School 3</p>
-            </div>
-            
-        <div class="game-container"><a href="/projects/riddleschool4/">
-          <img src="/projects/riddleschool4/riddleschool4.png" alt="Game 3"></a>
-            <p>Riddle School 4</p>
-          </div>
-          <div class="game-container"><a href="/projects/riddleschool5/">
-            <img src="/projects/riddleschool5/riddleschool5.png" alt="Game 3"></a>
-              <p>Riddle School 5</p>
-            </div>
-            <div class="game-container"><a href="/projects/riddletransfer/">
-              <img src="/projects/riddletransfer/riddletransfer.png" alt="Game 3"></a>
-                <p>Riddle Transfer</p>
-              </div>
-              <div class="game-container"><a href="/projects/riddletransfer2/">
-                <img src="/projects/riddletransfer2/riddletransfer2.png" alt="Game 3"></a>
-                  <p>Riddle Transfer 2</p>
-                </div>
-      <div class="game-container"><a href="./projects/rabbit-samurai/">
-        <img src="/projects/rabbit-samurai/splash.png" alt="Game 3"></a>
-          <p>Rabbit Samurai</p>
-        </div>
-      <div class="game-container"><a href="/projects/rabbit-samurai2/">
-        <img src="/projects/rabbit-samurai2/splash.png" alt="Game 3"></a>
-          <p>Rabbit Samurai 2</p>
-           <!--- jk -->
-        </div>
-        <div class="game-container"><a href="/projects/subway-surfers/">
-          <img src="/projects/subway-surfers/img/splash.jpg" alt="Game 3"></a>
-            <p>Subway Surfers</p>
-          </div>
-    <div class="game-container"><a href="/projects/funkin/">
-    <img src="/projects/funkin/assets/images/logo.png" alt="Game 3"></a>
-      <p>Friday Night Funkin'</p>
-      </div>
-      <div class="game-container"><a href="/projects/glass-city/">
-        <img src="/projects/glass-city/image.png" alt="Game 3"></a>
-          <p>Glass City</p>
-        </div>
-        <div class="game-container"><a href="/projects/1/">
-          <img src="/projects/1/favicon.ico" alt="Game 3"></a>
-            <p>1</p>
-          </div>
-          <div class="game-container"><a href="/projects/10-minutes-till-dawn/">
-            <img src="/projects/10-minutes-till-dawn/splash.png" alt="Game 3"></a>
-              <p>10 Minutes till dawn</p>
-            </div>
-            <div class="game-container"><a href="/projects/DogeMiner/">
-              <img src="/projects/DogeMiner/img/dogeminer_300x300.png" alt="Game 3"></a>
-                <p>Doge Miner</p>
-              </div>
-                </div>
-                <div class="game-container"><a href="/projects/agario">
-                  <img src="/projects/agario/img/agar.jpg" alt="Game 3"></a>
-                    <p>Agar.io</p>
-                  </div>
-                  <div class="game-container"><a href="/projects/geoscratch/geodashlite.html">
-                    <img src="/projects/geoscratch/geodashlite.png" alt="Game 3"></a>
-                      <p>Geo Dash Lite</p>
-                    </div>
-                    <div class="game-container"><a href="/projects/geodash/">
-                      <img src="/projects/geodash/geoscratchicon.png" alt="Game 3"></a>
-                        <p>Geo Dash Scratch</p>
-                      </div>
-                      <div class="game-container"><a href="/projects/impossiblequiz">
-                        <img src="/projects/impossiblequiz/impossiblequiz.png" alt="Game 3"></a>
-                          <p>Impossible Quiz</p>
-                        </div>
-                        <div class="game-container"><a href="/projects/Im">
-                          <img src="/projects/agario/img/agar.jpg" alt="Game 3"></a>
-                            <p>Impossible Quiz</p>
-                          </div>
-                          <div class="game-container"><a href="/projects/agario">
-                            <img src="/projects/agario/img/agar.jpg" alt="Game 3"></a>
-                              <p>Ball Dodge</p>
-                            </div>
-                            <div class="game-container"><a href="/projects/Basketball-stars">
-                              <img src="/projects/Basketball-stars/splash.png" alt="Game 3"></a>
-                                <p>Basketball stars</p>
-                              </div>
-                              <div class="game-container"><a href="/projects/backrooms/">
-                                <img src="/projects/agario/img/agar.jpg" alt="Game 3"></a>
-                                  <p>backrooms</p>
-                                </div>
-                                <div class="game-container"><a href="/projects/Baldis-Basics/">
-                                  <img src="/projects/Baldis-Basics/splash.png" alt="Game 3"></a>
-                                    <p>Baldis Basics</p>
-                                  </div>
-                                  <div class="game-container"><a href="/projects/chickens/">
-                                    <img src="/projects/chickens/logo.png" alt="Game 3"></a>
-                                      <p>ballistic chickens</p>
-                                    </div>
-                                    <div class="game-container"><a href="/projects/Rocket-League/">
-                                      <img src="/projects/Rocket-League/splash.png" alt="Game 3"></a>
-                                        <p>Rocket League at home</p>
-                                      </div>
-                                       <!--- CHATGPT write me an essay -->
-                                      <div class="game-container"><a href="/projects/backrooms/">
-                                        <img src="/projects/backrooms/img/splash.png" alt="Game 3"></a>
-                                          <p>backrooms</p>
-                                        </div>
-                                        <div class="game-container"><a href="/projects/agario/">
-                                          <img src="/projects/agario/img/agar.jpg" alt="Game 3"></a>
-                                            <p>backrooms</p>
-                                          </div>
-                                          
-    </div>
-  </main>
-  <footer>
-    <p>&copy; Zenosaid</p>
-  </footer>
-  <script src="script.js"></script>
+    </section>
 </body>
-
 </html>
