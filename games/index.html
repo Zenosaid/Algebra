@@ -1,37 +1,40 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Gaming Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic Game Website</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to My Gaming Website!</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for games...">
+            <button>Search</button>
+        </div>
+        <div class="settings-icon">
+            <!-- Replace the 'settings-icon.png' with your settings icon image -->
+            <img src="settings-icon.png" alt="Settings">
+        </div>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#action">Action</a></li>
-            <li><a href="#clicker">Clicker</a></li>
-            <li><a href="#sport">Sport</a></li>
-            <!-- Add more genres as needed -->
-        </ul>
-    </nav>
     <main>
-        <section id="action">
-            <h2>Action Games</h2>
-            <!-- Content for action games goes here -->
+        <section class="featured-games">
+            <h2>Featured Games</h2>
+            <div class="game-icons">
+                <!-- Featured game icons go here -->
+            </div>
         </section>
-        <section id="clicker">
-            <h2>Clicker Games</h2>
-            <!-- Content for clicker games goes here -->
+        <section class="genre-section">
+            <h2>Action</h2>
+            <div class="game-icons">
+                <!-- Action game icons go here -->
+            </div>
+            <div class="view-more">
+                <a href="#">View More</a>
+            </div>
         </section>
-        <section id="sport">
-            <h2>Sport Games</h2>
-            <!-- Content for sport games goes here -->
-        </section>
+        <!-- Add more genre sections for other genres (Casual, Puzzle, etc.) -->
     </main>
-    <footer>
-        <!-- Footer content goes here -->
-    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

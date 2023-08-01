@@ -1,45 +1,87 @@
+/* Apply your futuristic palette and customize the styles as needed */
 body {
     font-family: Arial, sans-serif;
-    background-color: #000;
+    background-color: #111;
     color: #fff;
-};
-
-section#featured-games {
-    /* Styling for your featured games section */
-};
-
-section#game-categories {
-    /* Styling for your game categories section */
-};
-
-section#game-categories .category {
-    /* Styling for each category */
-    transition: transform .2s;
 }
 
-section#game-categories .category:hover {
-    /* When category is hovered */
-    transform: scale(1.05);
-}
-.game {
-    position: relative;
-    width: 200px;
-    height: 200px;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
 }
 
-.game .game-icon {
-    width: 100%;
-    height: 100%;
-}
-
-.game .game-title {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0,0,0,0.5); 
-    color: #fff;
+.search-bar input {
     padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    background-color: #00f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.settings-icon img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.game-icons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.game-icons img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Show game name on hover */
+.game-icons img:hover::after {
+    content: attr(alt);
+    display: block;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.view-more {
     text-align: center;
+}
+
+.view-more a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00f;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
 }
