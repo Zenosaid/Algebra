@@ -3,15 +3,15 @@ const genresContainer = document.querySelector('.genres-container');
 
 // Replace these game icons and names with your actual data
 const featuredGames = [
-    { name: 'Game 1', iconUrl: 'path_to_game_icon_1.png' },
-    { name: 'Game 2', iconUrl: 'path_to_game_icon_2.png' },
+    { name: 'Game 1', iconUrl: 'game-icon.jpg' },
+    { name: 'Game 2', iconUrl: 'game-icon.jpg' },
     // Add more featured games here
 ];
 
 const genres = [
     { genre: 'Action', games: [
-        { name: 'Action Game 1', iconUrl: 'path_to_action_game_icon_1.png' },
-        { name: 'Action Game 2', iconUrl: 'path_to_action_game_icon_2.png' },
+        { name: 'Action Game 1', iconUrl: 'game-icon.jpg' },
+        { name: 'Action Game 2', iconUrl: 'game-icon.jpg' },
         // Add more action games here
     ]},
     // Add more genres and games here
