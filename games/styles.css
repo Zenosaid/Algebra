@@ -50,7 +50,8 @@ h2 {
 
 .game-icons {
     display: flex;
-    flex-wrap: wrap; /* Allow icons to wrap to the next line when needed */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    overflow: hidden; /* Hide overflow to create the scrolling effect */
 }
 
 .game-icon {
@@ -89,20 +90,19 @@ h2 {
     opacity: 1; /* Show title on hover */
 }
 
-.featured-icons {
-    animation: marqueeAnim 20s linear infinite; /* Apply the animation to the 'featured-icons' class */
-}
-
 /* CSS Animation for horizontal movement for the 'featured-icons' class */
 @keyframes marqueeAnim {
     0% {
-        transform: translateX(0);
+        transform: translateX(0%);
     }
     100% {
-        transform: translateX(-100%); /* Move icons to the left */
+        transform: translateX(-100%);
     }
 }
 
+.featured-icons {
+    animation: marqueeAnim 20s linear infinite; /* Apply the animation to the 'featured-icons' class */
+}
 .view-more {
     text-align: center;
 }
