@@ -7,20 +7,43 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Featured Games</h1>
-        <div class="featured-games-container">
-            <!-- Featured game icons will be dynamically added here -->
-        </div>
-    </header>
-
-    <main>
-        <h1>Genres</h1>
-        <div class="genres-container">
-            <!-- Genre rows with game icons will be dynamically added here -->
-        </div>
-    </main>
-
+    <div class="container">
+        <header>
+            <h1>Game Website</h1>
+            <input type="text" id="search" placeholder="Search...">
+        </header>
+        <section class="featured">
+            <!-- Featured game icons -->
+            <div class="game-icon">
+                <img src="example_icon.jpg" alt="Game Icon">
+                <span class="game-name">Example Game</span>
+            </div>
+            <!-- Add more featured game icons here -->
+        </section>
+        <section class="genres">
+            <!-- Genre rows -->
+            <h2>Genres</h2>
+            <div class="genre-row">
+                <h3>Action</h3>
+                <div class="game-icon">
+                    <img src="example_icon.jpg" alt="Game Icon">
+                    <span class="game-name">Example Game 2</span>
+                </div>
+                <!-- Add more action game icons here -->
+                <!-- If there are many, you can add a "View More" link to a separate page -->
+            </div>
+            <div class="genre-row">
+                <h3>Casual</h3>
+                <div class="game-icon">
+                    <img src="example_icon.jpg" alt="Game Icon">
+                    <span class="game-name">Example Game 3</span>
+                </div>
+                <!-- Add more casual game icons here -->
+                <!-- If there are many, you can add a "View More" link to a separate page -->
+            </div>
+            <!-- Add more genre rows here -->
+        </section>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
