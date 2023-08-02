@@ -1,120 +1,24 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #241468; /* Background color */
-    color: #fff;
+    background-color: #241468;
 }
 
-/* ... rest of the CSS ... */
+.search-container {
+    background-color: #F79BD3;
+    margin-bottom: 20px;
+}
 
-header {
+/* To display game icons side by side in a row and scroll horizontally */
+.featured {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #9F0D7F; /* Header background color */
-}
-
-.search-bar input {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    margin-right: 10px;
-}
-
-.search-bar button {
-    padding: 10px 15px;
-    background-color: #EA1179; /* Search button background color */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-}
-
-.settings-icon img {
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-}
-
-main {
-    padding: 20px;
-}
-
-section {
-    margin-bottom: 30px;
-}
-
-h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.game-icons {
-    display: flex;
-    flex-wrap: nowrap; /* Prevent wrapping */
-    overflow: hidden; /* Hide overflow to create the scrolling effect */
+    overflow-x: auto;
+    background-color: #9F0D7F;
+    color: #EA1179;
 }
 
 .game-icon {
-    position: relative;
-    width: 100px; /* Set the width of the game icon container */
-    height: 100px; /* Set the height of the game icon container */
     margin: 10px;
-    border-radius: 10px;
-    background-color: #F79BD3; /* Game icon container background color */
-    overflow: hidden; /* Clip the game title inside the container */
 }
 
-.game-icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    cursor: pointer;
+.game-icon:hover {
+    border: 2px solid #EA1179;
 }
-
-.game-title {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    padding: 5px;
-    border-radius: 0 0 10px 10px;
-    text-align: center;
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.2s ease;
-}
-
-.game-icon:hover .game-title {
-    opacity: 1; /* Show title on hover */
-}
-
-/* CSS Animation for horizontal movement for the 'featured-icons' class */
-@keyframes marqueeAnim {
-    0% {
-        transform: translateX(0%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-.featured-icons {
-    animation: marqueeAnim 20s linear infinite; /* Apply the animation to the 'featured-icons' class */
-}
-
-.view-more {
-    text-align: center;
-}
-
-.view-more a {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #EA1179; /* View more button background color */
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-

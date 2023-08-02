@@ -1,70 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Futuristic Game Website</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <div class="search-bar">
-            <input type="text" placeholder="Search for games...">
-            <button>Search</button>
-        </div>
-        <div class="settings-icon">
-            <!-- Replace the 'settings-icon.png' with your settings icon image -->
-            <img src="settings-icon.png" alt="Settings">
-        </div>
-    </header>
-    <main>
-        <section class="featured-games">
-            <h2>Featured Games</h2>
-            <div class="game-icons featured-icons">
-                <!-- Example Featured Game Icons -->
-                <div class="game-icon">
-                    <img src="game-icon.jpg" alt="Example Game">
-                    <span class="game-title">Example Game</span>
-                </div>
-                <div class="game-icon">
-                    <img src="game-icon.jpg" alt="Example Game">
-                    <span class="game-title">Example Game</span>
-                </div>
-                <div class="game-icon">
-                  <img src="game-icon.jpg" alt="Example Game">
-                  <span class="game-title">Example Game</span>
-              </div>
-              <div class="game-icon">
-                  <img src="game-icon.jpg" alt="Example Game">
-                  <span class="game-title">Example Game</span>
-              </div>
-              <div class="game-icon">
-                <img src="game-icon.jpg" alt="Example Game">
-                <span class="game-title">Example Game</span>
-            </div>
-            <div class="game-icon">
-                <img src="game-icon.jpg" alt="Example Game">
-                <span class="game-title">Example Game</span>
-            </div>
-                <!-- Add more featured game icons here -->
-            </div>
-        </section>
-        <section class="genre-section">
-            <h2>Action</h2>
-            <div class="game-icons">
-                <div class="game-icon">
-                    <img src="game-icon.jpg" alt="Example Game">
-                    <span class="game-title">Example Game</span>
-                </div>
-                <!-- Action game icons go here -->
-            </div>
-            <!-- Add more genre sections for other genres (Clicker, Classic, Sport, Puzzle, Horror, Hard Games) -->
-        </section>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
 
-        <div class="view-more">
-            <a href="#">View More</a>
+    <body>
+        <div class="search-container">
+            <input type="text" placeholder="Search game.." name="search">
+            <button type="submit">Submit</button>
         </div>
-    </main>
-    <script src="script.js"></script>
-</body>
+
+        <div class="featured">
+            <h2>Featured Games</h2>
+            <!-- Featured game icons would go here -->
+            <img class="game-icon" src="path-to-your-icon1.jpg">
+            <img class="game-icon" src="path-to-your-icon2.jpg">
+            <!-- And so on... -->
+        </div>
+
+        <div class="genres">
+            <!-- Replace 'genre' with desired genre names -->
+            <div class="genre action">
+                <h3>Action Games</h3>
+                <!-- Game icons go here -->
+            </div>
+            <!-- Repeat blocks like the above for each genre -->
+        </div>
+    </body>
 </html>
