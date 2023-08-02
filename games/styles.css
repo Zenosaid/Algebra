@@ -48,6 +48,11 @@ h2 {
     margin-bottom: 10px;
 }
 
+.game-icons {
+    display: flex;
+    flex-wrap: wrap; /* Allow icons to wrap to the next line when needed */
+}
+
 .game-icon {
     position: relative;
     width: 100px; /* Set the width of the game icon container */
@@ -55,6 +60,7 @@ h2 {
     margin: 10px;
     border-radius: 10px;
     background-color: #F79BD3; /* Game icon container background color */
+    overflow: hidden; /* Clip the game title inside the container */
 }
 
 .game-icon img {
