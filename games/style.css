@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:#383a3b;
+  }
+  
+  header {
+    background-color: lightgray;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  nav {
+    background-color: darkgray;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav a {
+    color: white;
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+  }
+  
+  main {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer {
+    background-color: lightgray;
+    padding: 20px;
+    text-align: center;
+  }
+  .game-container {
+    display: inline-block;
+    text-align: center;
+    margin: 20px;
+    border: 1px solid black;
+    padding: 20px;
+    width: 200px;
+    height: 250px;
+    background-color: black;
+    border-radius: 20px;
+    transition: all 0.5s;
+  }
+  .game-container:hover {
+    background-color: #454545;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #454545;
+    cursor: pointer;
+  }
+  
+  
+  .game-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .game-container p {
+    font-weight: bold;
+    color:green;
+  }
+  body::-webkit-scrollbar {
+    width: 10px;
+    background-color: green;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 10px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background-color: green;
+  
+  }
+  
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    background: lightgray;
+    border-radius: 15px;
+    text-align: center;
+    border: none;
+    width: 60%;
+  }
+  
+  button[type="submit"] {
+    padding: 10px 20px;
+    border-radius: 0 20px 20px 0;
+    background-color: green;
+    color: white;
+    border: none;
+  }

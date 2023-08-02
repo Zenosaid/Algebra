@@ -1,48 +1,50 @@
-// Sample data for game icons
-const featuredGames = [
-  { name: "Game 1", imgSrc: "game1.jpg", link: "https://game1.com" },
-  { name: "Game 2", imgSrc: "game2.jpg", link: "https://game2.com" },
-  // Add more featured games here
-];
-
-const actionGames = [
-  { name: "Action Game 1", imgSrc: "action_game1.jpg", link: "https://actiongame1.com" },
-  { name: "Action Game 2", imgSrc: "action_game2.jpg", link: "https://actiongame2.com" },
-  // Add more action games here
-];
-
-const casualGames = [
-  { name: "Casual Game 1", imgSrc: "casual_game1.jpg", link: "https://casualgame1.com" },
-  { name: "Casual Game 2", imgSrc: "casual_game2.jpg", link: "https://casualgame2.com" },
-  // Add more casual games here
-];
-
-// Function to add game icons to a container
-function addGameIcons(container, games) {
-  games.forEach((game) => {
-    const gameIcon = document.createElement("div");
-    gameIcon.classList.add("game-icon");
-    gameIcon.innerHTML = `
-      <a href="${game.link}" target="_blank">
-        <img src="${game.imgSrc}" alt="${game.name}">
-      </a>
-      <div class="game-name">${game.name}</div>
-    `;
-    container.appendChild(gameIcon);
-  });
+console.log("Zenosaid's game website - You can fork, just leave credit!");
+var d = new Date (Date.now());
+var month = d.getMonth();
+var day = d.getDate();
+if(month == 3 && day == 1){
+  window.location.href = "/games/a68727ceae02c159bef14f717f0eb5d6.mp4";
 }
 
-// Add featured games to the featured-games-container
-const featuredContainer = document.querySelector(".featured-games-container");
-addGameIcons(featuredContainer, featuredGames);
+ window.onload = function() {
+    const gameContainerList = document.querySelectorAll('.game-container');
+    const gameContainerContainer = document.querySelector('.game-container-container');
+    const searchInput = document.querySelector('#search-input');
 
-// Add action games to the action-games-container
-const actionContainer = document.querySelector(".genre-games-container:nth-of-type(1)");
-addGameIcons(actionContainer, actionGames);
+    function updateResults() {
+      const searchTerm = searchInput.value.toLowerCase();
+      let totalWidth = 0;
+      gameContainerList.forEach(container => {
+        const gameName = container.querySelector('p').textContent.toLowerCase();
+        if (gameName.includes(searchTerm)) {
+          container.style.display = 'inline-block';
+          totalWidth += container.offsetWidth;
+        } else {
+          container.style.display = 'none';
+        }
+      });
+     
+      if (gameContainerContainer) {
+  gameContainerContainer.style.width = totalWidth + 'px';
+}
+    }
+    searchInput.addEventListener('input', updateResults);
+  };
+// Get all the game containers
+const gameContainers = document.querySelectorAll('.game-container');
 
-// Add casual games to the casual-games-container
-const casualContainer = document.querySelector(".genre-games-container:nth-of-type(2)");
-addGameIcons(casualContainer, casualGames);
+// Convert to array and sort alphabetically
+const sortedContainers = Array.from(gameContainers).sort((a, b) => {
+  const gameA = a.querySelector('p').textContent;
+  const gameB = b.querySelector('p').textContent;
+  return gameA.localeCompare(gameB);
+});
 
-// You can add other genres in a similar way
+// Clear out current game containers
+const main = document.querySelector('main');
+main.innerHTML = '';
+
+// Append sorted game containers to the main element
+sortedContainers.forEach(container => main.appendChild(container));
+
 
