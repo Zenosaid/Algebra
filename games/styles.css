@@ -103,6 +103,7 @@ h2 {
 .featured-icons {
     animation: marqueeAnim 20s linear infinite; /* Apply the animation to the 'featured-icons' class */
 }
+
 .view-more {
     text-align: center;
 }
