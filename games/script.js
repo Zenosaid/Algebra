@@ -47,4 +47,27 @@ main.innerHTML = '';
 // Append sorted game containers to the main element
 sortedContainers.forEach(container => main.appendChild(container));
 
+// Get a reference to the iframe element
+const gameIframe = document.getElementById('game-iframe');
+
+// Function to open a game in the iframe
+function openGame(gameURL) {
+    // Set the iframe's src to the selected game's URL
+    gameIframe.src = gameURL;
+
+    // Show the iframe
+    gameIframe.style.display = 'block';
+
+    // Scroll to the top of the iframe for better user experience
+    window.scrollTo(0, gameIframe.offsetTop);
+}
+
+// Function to close the iframe
+function closeGame() {
+    // Clear the iframe's src
+    gameIframe.src = 'about:blank';
+
+    // Hide the iframe
+    gameIframe.style.display = 'none';
+}
 
