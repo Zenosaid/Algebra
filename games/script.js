@@ -48,19 +48,17 @@ main.innerHTML = '';
 sortedContainers.forEach(container => main.appendChild(container));
 
 // Get a reference to the iframe element
-const gameIframe = document.getElementById('game-iframe');
-
-// Function to open a game in the iframe
-function openGame(gameURL) {
-    // Set the iframe's src to the selected game's URL
-    gameIframe.src = gameURL;
-
-    // Show the iframe
-    gameIframe.style.display = 'block';
-
-    // Scroll to the top of the iframe for better user experience
-    window.scrollTo(0, gameIframe.offsetTop);
+function loadGame(gameImage) {
+  // Get the data-src attribute value from the clicked game container
+  var gameUrl = gameImage.parentElement.getAttribute("data-src");
+  
+  // Get the iframe element
+  var iframe = document.getElementById("game-iframe");
+  
+  // Set the src attribute of the iframe to the game URL
+  iframe.src = gameUrl;
 }
+
 
 // Function to close the iframe
 function closeGame() {
