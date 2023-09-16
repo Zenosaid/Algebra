@@ -2,6 +2,7 @@
 function createGameIcon(game) {
   const gameIcon = document.createElement('div');
   gameIcon.className = 'game-container';
+  cdn = 'https://gitloaf.com/cdn'
   gameIcon.innerHTML = `
     <img src="${cdn}/Zenosaid/projects/${game.root}/${game.img}" onerror="this.src='./assets/globe.svg'"/>
     <p>${game.name}</p>
