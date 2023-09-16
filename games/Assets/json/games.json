@@ -1,8 +1,12 @@
 [
-    {
-    "name": "1v1.lol",
-    "root": "1v1lol",
-    "file": "index.html",
-    "img": "splash.png"
+  {
+    "name": "Game 1",
+    "root": "game1",
+    "img": "game1.jpg"
+  },
+  {
+    "name": "Game 2",
+    "root": "game2",
+    "img": "game2.jpg"
   }
 ]
