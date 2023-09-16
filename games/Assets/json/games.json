@@ -1,12 +1,20 @@
 [
   {
-    "name": "Game 1",
-    "root": "game1",
-    "img": "game1.jpg"
+      "name": "Game 1",
+      "root": "game1",
+      "file": "index.html",
+      "img": "game1.jpg"
   },
   {
-    "name": "Game 2",
-    "root": "game2",
-    "img": "game2.jpg"
+      "name": "Game 2",
+      "root": "game2",
+      "file": "index.html",
+      "img": "game2.jpg"
+  },
+  {
+      "name": "Game 3",
+      "root": "game3",
+      "file": "index.html",
+      "img": "game3.jpg"
   }
 ]
