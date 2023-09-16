@@ -1,44 +1,24 @@
-// Select the elements
-const gamesContainer = document.querySelector('.games');
-const searchBar = document.querySelector('.searchbar');
-const gameContainer = document.querySelector('.gamecontainer');
-const gameFrame = gameContainer.querySelector('.frame');
-const gameNav = gameContainer.querySelector('.nav');
-
-// Define your GitHub username and repo base URL
-const githubUsername = 'Zenosaid'; // Replace with your GitHub username
-const githubRepoBaseUrl = 'https://github.com/' + githubUsername + '/projects/blob/main/'; // Replace 'yourrepo' with your repository name
-
 // Function to create a game icon based on the game data
 function createGameIcon(game) {
   const gameIcon = document.createElement('div');
   gameIcon.className = 'game-container';
   gameIcon.innerHTML = `
-    <img src="${cdn}/${game.root}/${game.img}" onerror="this.src='./assets/globe.svg'"/>
+    <img src="${cdn}/Zenosaid/projects/${game.root}/${game.img}" onerror="this.src='./assets/globe.svg'"/>
     <p>${game.name}</p>
   `;
-  
+
   // Add a click event listener to open the game when clicked
   gameIcon.addEventListener('click', () => {
-    gamesContainer.classList.add('hidden');
-    searchBar.classList.add('hidden');
-    gameContainer.classList.remove('hidden');
-    document.querySelector('.saveItems').classList.add('hidden');
-    document.querySelector('.navbar').classList.add('noshadow');
+    // Construct the URL for the game using htmlpreview.github.io
+    const gameUrl = `http://htmlpreview.github.io/?/github.com/Zenosaid/projects/${game.root}/index.html`;
 
-    // Construct the GitHub preview URL for the game's index.html
-    const githubPreviewBaseUrl = 'http://htmlpreview.github.io/?';
-    const gameRoot = game.root;
-    const githubPreviewUrl = `${githubPreviewBaseUrl}${githubRepoBaseUrl}/${gameRoot}/index.html`;
-
-    // Set the src attribute of the iframe to the GitHub preview URL
-    gameFrame.querySelector('iframe').src = githubPreviewUrl;
-
-    gameNav.querySelector('span').textContent = game.name;
+    // Open the game URL in a new tab/window
+    window.open(gameUrl, '_blank');
   });
 
   return gameIcon;
 }
+
 
 // Fetch the games data from a JSON file
 fetch('./assets/json/games.json')
