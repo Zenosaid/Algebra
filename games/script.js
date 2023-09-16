@@ -14,7 +14,7 @@ function createGameIcon(game) {
   const gameIcon = document.createElement('div');
   gameIcon.className = 'game-container';
   gameIcon.innerHTML = `
-    <img src="${cdn}/Zenosaid/projects/${game.root}/${game.img}" onerror="this.src='./assets/globe.svg'"/>
+    <img src="${cdn}/${game.root}/${game.img}" onerror="this.src='./assets/globe.svg'"/>
     <p>${game.name}</p>
   `;
   
