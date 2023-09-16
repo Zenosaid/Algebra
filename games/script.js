@@ -7,14 +7,14 @@ function createGameIcon(game) {
   gameIcon.className = 'game-container';
   cdn = 'https://gitloaf.com/cdn'
   gameIcon.innerHTML = `
-    <img src="${cdn}/Zenosaid/projects/${game.root}/${game.img}" onerror="this.src='./assets/globe.svg'"/>
+    <img src="${cdn}/Zenosaid/projects/main/${game.root}/${game.img}" onerror="this.src='./assets/globe.svg'"/>
     <p>${game.name}</p>
   `;
 
   // Add a click event listener to open the game when clicked
   gameIcon.addEventListener('click', () => {
     // Construct the URL for the game using htmlpreview.github.io
-    const gameUrl = `http://htmlpreview.github.io/?/github.com/Zenosaid/projects/main/${game.root}/index.html`;
+    const gameUrl = `http://htmlpreview.github.io/?/github.com/Zenosaid/projects/${game.root}/index.html`;
 
     // Open the game URL in a new tab/window
     window.open(gameUrl, '_blank');
