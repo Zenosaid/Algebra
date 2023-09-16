@@ -2,7 +2,6 @@
 const gamesContainer = document.querySelector('.games');
 const searchBar = document.querySelector('.searchbar');
 const gameContainer = document.querySelector('.gamecontainer');
-const gameFrame = gameContainer.querySelector('.frame');
 const gameNav = gameContainer.querySelector('.nav');
 
 
