@@ -40,7 +40,7 @@ function createGameContainer(game) {
 }
 
 // Fetch the games data from the JSON file
-fetch('./Assets/json/games.json')
+fetch('./assets/json/games.json')
     .then((res) => res.json())
     .then((games) => {
         // Loop through each game and create a new game container for it
