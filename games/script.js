@@ -5,63 +5,31 @@ const gameContainer = document.querySelector('.gamecontainer');
 const gameFrame = gameContainer.querySelector('.frame');
 const gameNav = gameContainer.querySelector('.nav');
 
-// Define the CDN base URL (if applicable)
-const cdn = 'https://htmlpreview.github.io/?'; // Update with your CDN URL
 
-// Function to create a game icon element
+cdn = 'https://gitloaf.com/cdn'
+// Function to create a game icon based on the game data
 function createGameIcon(game) {
-  const gameEl = document.createElement('div');
-  gameEl.className = 'game-container';
-  gameEl.innerHTML = `
-    <img src="${cdn}${game.root}/${game.img}" onerror="this.src='./assets/globe.svg'"/>
+  const gameIcon = document.createElement('div');
+  gameIcon.className = 'game-container';
+  gameIcon.innerHTML = `
+    <img src="${cdn}/${game.root}/${game.img}" onerror="this.src='./assets/globe.svg'"/>
     <p>${game.name}</p>
   `;
-  gameEl.addEventListener('click', () => {
-    playGame(game);
-  });
-  return gameEl;
-}
-
-// Function to play a game when a game icon is clicked
-function playGame(game) {
-  gamesContainer.classList.add('hidden');
-  searchBar.classList.add('hidden');
-  gameContainer.classList.remove('hidden');
-  document.querySelector('.saveItems').classList.add('hidden');
-  document.querySelector('.navbar').classList.add('noshadow');
-  gameFrame.querySelector('iframe').src = `./assets/game?game=${game.root}`;
-  gameNav.querySelector('span').textContent = game.name;
-}
-
-// Listen for input event on the search bar
-searchBar.addEventListener('input', (e) => {
-  const query = searchBar.value.trim().toLowerCase();
-
-  // Loop through all the game icons and show/hide them based on the search query
-  const gameIcons = document.querySelectorAll('.game-container');
-  gameIcons.forEach((gameIcon) => {
-    const gameName = gameIcon.querySelector('p').textContent.trim().toLowerCase();
-    if (query) {
-      if (gameName.includes(query)) {
-        gameIcon.style.display = 'inline-block';
-      } else {
-        gameIcon.style.display = 'none';
-      }
-    } else {
-      gameIcon.style.display = 'inline-block';
-    }
+  
+  // Add a click event listener to open the game when clicked
+  gameIcon.addEventListener('click', () => {
+    gamesContainer.classList.add('hidden');
+    searchBar.classList.add('hidden');
+    gameContainer.classList.remove('hidden');
+    document.querySelector('.saveItems').classList.add('hidden');
+    document.querySelector('.navbar').classList.add('noshadow');
+    gameFrame.querySelector('iframe').src = `./assets/game?game=${game.root}`;
+    gameNav.querySelector('span').textContent = game.name;
   });
 
-  // Show/hide the "No games" message based on whether any games match the search query
-  const noGamesMessage = document.querySelector('.nogames');
-  if (document.querySelectorAll('.game-container[style="display: inline-block;"]').length === 0) {
-    noGamesMessage.style.display = 'initial';
-  } else {
-    noGamesMessage.style.display = 'none';
-  }
-});
+  return gameIcon;
+}
 
-// Fetch the games data from a JSON file
 // Fetch the games data from a JSON file
 fetch('./assets/json/games.json')
   .then((res) => res.json())
@@ -77,8 +45,4 @@ fetch('./assets/json/games.json')
     alert(e);
   });
 
-
-// Hide the spinner element after the page is loaded
-document.querySelector('.spinner').style.display = 'none';
-
-// Rest of your code for saving/loading user data, key sequence handling, etc.
+// Rest of your existing code for search and other functionality...
