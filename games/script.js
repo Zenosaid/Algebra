@@ -11,7 +11,7 @@ function createGameIcon(game) {
   // Add a click event listener to open the game when clicked
   gameIcon.addEventListener('click', () => {
     // Construct the URL for the game using htmlpreview.github.io
-    const gameUrl = `http://htmlpreview.github.io/?/github.com/Zenosaid/projects/${game.root}/index.html`;
+    const gameUrl = `http://htmlpreview.github.io/?/github.com/Zenosaid/projects/main/${game.root}/index.html`;
 
     // Open the game URL in a new tab/window
     window.open(gameUrl, '_blank');
