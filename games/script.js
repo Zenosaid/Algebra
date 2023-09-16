@@ -62,6 +62,7 @@ searchBar.addEventListener('input', (e) => {
 });
 
 // Fetch the games data from a JSON file
+// Fetch the games data from a JSON file
 fetch('./assets/json/games.json')
   .then((res) => res.json())
   .then((games) => {
@@ -75,6 +76,7 @@ fetch('./assets/json/games.json')
     alert('Could not load games');
     alert(e);
   });
+
 
 // Hide the spinner element after the page is loaded
 document.querySelector('.spinner').style.display = 'none';
