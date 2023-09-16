@@ -21,7 +21,7 @@ function createGameIcon(game) {
 
 
 // Fetch the games data from a JSON file
-fetch('./assets/json/games.json')
+fetch('./Assets/json/games.json')
   .then((res) => res.json())
   .then((games) => {
     // Loop through each game and create a new game icon for it
