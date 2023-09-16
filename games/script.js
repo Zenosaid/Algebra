@@ -7,7 +7,7 @@ const gameNav = gameContainer.querySelector('.nav');
 
 // Define your GitHub username and repo base URL
 const githubUsername = 'Zenosaid'; // Replace with your GitHub username
-const githubRepoBaseUrl = 'https://github.com/' + githubUsername + '/yourrepo/blob/main'; // Replace 'yourrepo' with your repository name
+const githubRepoBaseUrl = 'https://github.com/' + githubUsername + '/projects/blob/main'; // Replace 'yourrepo' with your repository name
 
 // Function to create a game icon based on the game data
 function createGameIcon(game) {
