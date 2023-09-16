@@ -1,3 +1,6 @@
+// Define the gamesContainer variable at the beginning of your script
+const gamesContainer = document.querySelector('.games');
+const gameContainer = document.querySelector('.game-container');
 // Function to create a game icon based on the game data
 function createGameIcon(game) {
   const gameIcon = document.createElement('div');
