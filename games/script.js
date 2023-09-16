@@ -1,71 +1,82 @@
-console.log("Zenosaid's game website - You can fork, just leave credit!");
-var d = new Date (Date.now());
-var month = d.getMonth();
-var day = d.getDate();
-if(month == 3 && day == 1){
-  window.location.href = "/games/a68727ceae02c159bef14f717f0eb5d6.mp4";
+// Select the elements
+const gamesContainer = document.querySelector('.games');
+const searchBar = document.querySelector('.searchbar');
+const gameContainer = document.querySelector('.gamecontainer');
+const gameFrame = gameContainer.querySelector('.frame');
+const gameNav = gameContainer.querySelector('.nav');
+
+// Define the CDN base URL (if applicable)
+const cdn = 'https://htmlpreview.github.io/?'; // Update with your CDN URL
+
+// Function to create a game icon element
+function createGameIcon(game) {
+  const gameEl = document.createElement('div');
+  gameEl.className = 'game-container';
+  gameEl.innerHTML = `
+    <img src="${cdn}${game.root}/${game.img}" onerror="this.src='./assets/globe.svg'"/>
+    <p>${game.name}</p>
+  `;
+  gameEl.addEventListener('click', () => {
+    playGame(game);
+  });
+  return gameEl;
 }
 
- window.onload = function() {
-    const gameContainerList = document.querySelectorAll('.game-container');
-    const gameContainerContainer = document.querySelector('.game-container-container');
-    const searchInput = document.querySelector('#search-input');
-
-    function updateResults() {
-      const searchTerm = searchInput.value.toLowerCase();
-      let totalWidth = 0;
-      gameContainerList.forEach(container => {
-        const gameName = container.querySelector('p').textContent.toLowerCase();
-        if (gameName.includes(searchTerm)) {
-          container.style.display = 'inline-block';
-          totalWidth += container.offsetWidth;
-        } else {
-          container.style.display = 'none';
-        }
-      });
-     
-      if (gameContainerContainer) {
-  gameContainerContainer.style.width = totalWidth + 'px';
+// Function to play a game when a game icon is clicked
+function playGame(game) {
+  gamesContainer.classList.add('hidden');
+  searchBar.classList.add('hidden');
+  gameContainer.classList.remove('hidden');
+  document.querySelector('.saveItems').classList.add('hidden');
+  document.querySelector('.navbar').classList.add('noshadow');
+  gameFrame.querySelector('iframe').src = `./assets/game?game=${game.root}`;
+  gameNav.querySelector('span').textContent = game.name;
 }
+
+// Listen for input event on the search bar
+searchBar.addEventListener('input', (e) => {
+  const query = searchBar.value.trim().toLowerCase();
+
+  // Loop through all the game icons and show/hide them based on the search query
+  const gameIcons = document.querySelectorAll('.game-container');
+  gameIcons.forEach((gameIcon) => {
+    const gameName = gameIcon.querySelector('p').textContent.trim().toLowerCase();
+    if (query) {
+      if (gameName.includes(query)) {
+        gameIcon.style.display = 'inline-block';
+      } else {
+        gameIcon.style.display = 'none';
+      }
+    } else {
+      gameIcon.style.display = 'inline-block';
     }
-    searchInput.addEventListener('input', updateResults);
-  };
-// Get all the game containers
-const gameContainers = document.querySelectorAll('.game-container');
+  });
 
-// Convert to array and sort alphabetically
-const sortedContainers = Array.from(gameContainers).sort((a, b) => {
-  const gameA = a.querySelector('p').textContent;
-  const gameB = b.querySelector('p').textContent;
-  return gameA.localeCompare(gameB);
+  // Show/hide the "No games" message based on whether any games match the search query
+  const noGamesMessage = document.querySelector('.nogames');
+  if (document.querySelectorAll('.game-container[style="display: inline-block;"]').length === 0) {
+    noGamesMessage.style.display = 'initial';
+  } else {
+    noGamesMessage.style.display = 'none';
+  }
 });
 
-// Clear out current game containers
-const main = document.querySelector('main');
-main.innerHTML = '';
+// Fetch the games data from a JSON file
+fetch('./assets/json/games.json')
+  .then((res) => res.json())
+  .then((games) => {
+    // Loop through each game and create a new game icon for it
+    games.forEach((game) => {
+      const gameIcon = createGameIcon(game);
+      gamesContainer.appendChild(gameIcon);
+    });
+  })
+  .catch((e) => {
+    alert('Could not load games');
+    alert(e);
+  });
 
-// Append sorted game containers to the main element
-sortedContainers.forEach(container => main.appendChild(container));
+// Hide the spinner element after the page is loaded
+document.querySelector('.spinner').style.display = 'none';
 
-// Get a reference to the iframe element
-function loadGame(gameImage) {
-  // Get the data-src attribute value from the clicked game container
-  var gameUrl = gameImage.parentElement.getAttribute("data-src");
-  
-  // Get the iframe element
-  var iframe = document.getElementById("game-iframe");
-  
-  // Set the src attribute of the iframe to the game URL
-  iframe.src = gameUrl;
-}
-
-
-// Function to close the iframe
-function closeGame() {
-    // Clear the iframe's src
-    gameIframe.src = 'about:blank';
-
-    // Hide the iframe
-    gameIframe.style.display = 'none';
-}
-
+// Rest of your code for saving/loading user data, key sequence handling, etc.
